@@ -30,6 +30,6 @@ int main()
 
 		ToUpper("12aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPQqRrsStTuUvVwWxXyYzZ", Text);
 		
-		printf_s(Text);
+		printf_s(Text); 
 	}
 }
