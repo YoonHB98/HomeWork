@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8b8b4387-ca60-4ff6-b28d-f911f6a73d07}</ProjectGuid>
-    <RootNamespace>HomeWork220114</RootNamespace>
+    <ProjectGuid>{21b99081-a8d2-4246-bfa5-ca8477573fdb}</ProjectGuid>
+    <RootNamespace>HomeWork220114Toint</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>HomeWork220114 ToUpper</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HomeWork220114 ToUpper.cpp" />
+    <ClCompile Include="HomeWork220114Toint.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
