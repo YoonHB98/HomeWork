@@ -7,9 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220112", "HomeWork2
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220113", "HomeWork220113\HomeWork220113.vcxproj", "{6879D317-A092-472F-AF16-97751A9E052B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220114", "HomeWork220114\HomeWork220114.vcxproj", "{8B8B4387-CA60-4FF6-B28D-F911F6A73D07}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220114 ToUpper", "HomeWork220114\HomeWork220114.vcxproj", "{8B8B4387-CA60-4FF6-B28D-F911F6A73D07}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220114 Reverse", "HomeWork220114 Reverse\HomeWork220114 Reverse.vcxproj", "{EB2FEECB-09BC-4ABC-B28E-4E92C5669FBE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220115", "HomeWork220115\HomeWork220115.vcxproj", "{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{EB2FEECB-09BC-4ABC-B28E-4E92C5669FBE}.Release|x64.Build.0 = Release|x64
 		{EB2FEECB-09BC-4ABC-B28E-4E92C5669FBE}.Release|x86.ActiveCfg = Release|Win32
 		{EB2FEECB-09BC-4ABC-B28E-4E92C5669FBE}.Release|x86.Build.0 = Release|Win32
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Debug|x64.ActiveCfg = Debug|x64
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Debug|x64.Build.0 = Debug|x64
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Debug|x86.ActiveCfg = Debug|Win32
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Debug|x86.Build.0 = Debug|Win32
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Release|x64.ActiveCfg = Release|x64
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Release|x64.Build.0 = Release|x64
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Release|x86.ActiveCfg = Release|Win32
+		{EB7DEF62-3F01-4AB0-91A9-8D75F987DA8E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
