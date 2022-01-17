@@ -16,19 +16,22 @@ int CountFirst(const char* _Text, int _Start, const char* _FindStr)
     int RightStringCount = StringCount(_FindStr);
     int i = 0;
     int _FindStrValue = 0;
+    int Count = 0;
     for ( i = _Start; i <= LeftStringCount; i += 1)
     {
         if (_Text[i] == _FindStr[_FindStrValue])
         {
             _FindStrValue += 1;
+            Count += 1;
         }
         else
         {
             _FindStrValue = 0;
+            Count += 1;
         }
         if (_FindStrValue == RightStringCount)
         {
-            int _Value = i - RightStringCount + 2;
+            int _Value = Count - RightStringCount + 1;
             return _Value;
         }
     }
@@ -40,22 +43,25 @@ int CountLast(const char* _Text, int _End, const char* _FindStr)
     int LeftStringCount = StringCount(_Text);
     int RightStringCount = StringCount(_FindStr);
     int i = 0;
-    _End = LeftStringCount;
+    
     int _FindStrValue = 0;
-    for (i = _End; i >= 0; i -= 1)
+    int Count = 0;
+    for (i = LeftStringCount - _End; i >= 0; i -= 1)
     {
         int a = ( LeftStringCount - i);
         if (_Text[i] == _FindStr[_FindStrValue])
         {
             _FindStrValue += 1;
+            Count += 1;
         }
         else
         {
             _FindStrValue = 0;
+            Count += 1;
         }
         if (_FindStrValue == RightStringCount)
         {
-            int Value =  a - (RightStringCount - 1);
+            int Value = Count - RightStringCount;
             return Value;
         }
     }
@@ -68,13 +74,13 @@ int main()
 {
     // 실패
     {
-        int Count = CountFirst("aaaa 1 2eeeee", 0, "eeeee");
+        int Count = CountFirst("aaaa 1 2  eeeee", 4, "eeeee");
 
         int a = 0;
     }
     
     {
-        int Count = CountLast("aaa  eee asdfasd 1111", 0, "eee");
+        int Count = CountLast("aaa  eeee asdfasd 1111", 8, "eeee");
 
         int a = 0;
     }
