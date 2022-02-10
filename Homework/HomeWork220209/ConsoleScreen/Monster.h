@@ -1,12 +1,13 @@
 #pragma once
-#include "ConsoleMath.h"
+#include "ConsoleObject.h"
 
 // Ό³Έν :
-class Monster
+class Monster : public ConsoleObject
 {
 public:
 	// constrcuter destructer
 	Monster();
+	Monster(TextScreen* _Screen, const char* _Text, const ConsoleVector& _Pos);
 	~Monster();
 
 	// delete Function
@@ -15,10 +16,9 @@ public:
 	Monster& operator=(const Monster& _Other) = delete;
 	Monster& operator=(Monster&& _Other) noexcept = delete;
 
+	void Update();
+
 protected:
 
 private:
-	ConsoleVector Pos;
-
 };
-

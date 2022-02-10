@@ -61,4 +61,11 @@ public:
 		y_ += _Other.y_;
 		return *this;
 	}
+
+	ConsoleVector& operator-=(const ConsoleVector& _Other)
+	{
+		x_ -= _Other.x_;
+		y_ -= _Other.y_;
+		return *this;
+	}
 };

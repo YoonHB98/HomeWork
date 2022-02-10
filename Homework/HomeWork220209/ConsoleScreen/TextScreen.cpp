@@ -1,5 +1,6 @@
 #include "TextScreen.h"
 #include <iostream>
+#include <assert.h>
 
 TextScreen::TextScreen(int _Width, int _Height, const char* _DefaultValue)
 	: PixelData_(nullptr)
@@ -9,7 +10,7 @@ TextScreen::TextScreen(int _Width, int _Height, const char* _DefaultValue)
 	CreateScreen(_Width, _Height, _DefaultValue);
 }
 
-TextScreen::~TextScreen() 
+TextScreen::~TextScreen()
 {
 	for (int i = 0; i < Size_.y_; i++)
 	{
@@ -40,7 +41,7 @@ void TextScreen::CreateScreen(int _Width, int _Height, const char* _DefaultValue
 	int RealWidth = Size_.x_ * 2;
 	RealWidth += 2;
 
-	PixelData_ = new char*[Size_.y_];
+	PixelData_ = new char* [Size_.y_];
 
 	for (int i = 0; i < Size_.y_; i++)
 	{
@@ -48,7 +49,7 @@ void TextScreen::CreateScreen(int _Width, int _Height, const char* _DefaultValue
 	}
 }
 
-void TextScreen::SettingScreen() 
+void TextScreen::SettingScreen()
 {
 	int RealWidth = Size_.x_ * 2;
 	RealWidth += 1;
@@ -68,7 +69,7 @@ void TextScreen::SettingScreen()
 
 }
 
-void TextScreen::PrintScreen() 
+void TextScreen::PrintScreen()
 {
 	system("cls");
 
@@ -80,29 +81,49 @@ void TextScreen::PrintScreen()
 }
 
 
-void TextScreen::SetPixel(ConsoleVector _Pos, const char* _DefaultValue) 
+// 대부분의 상황에서 이걸로 쓰겠지만
+void TextScreen::SetPixel(ConsoleVector _Pos, const char* _DefaultValue)
 {
-
 	SetPixel(_Pos.x_, _Pos.y_, _DefaultValue);
 }
 
-void TextScreen::SetPixel(int _X, int _Y, const char* _DefaultValue) 
+// 원론함수가 없으면 세세한 조정한 조정을 못할때가 있기 때문에
+// 2가지 함수를 굳이 구현하게 됩니다.
+// 코드는 사용성이 좋아야 합니다.
+void TextScreen::SetPixel(int _X, int _Y, const char* _DefaultValue)
 {
+	if (0 > _X)
+	{
+		assert(false);
+	}
+
+	if (0 > _Y)
+	{
+		assert(false);
+	}
+
+	if (Size_.x_ <= _X)
+	{
+		assert(false);
+	}
+
+	if (Size_.y_ <= _Y)
+	{
+		assert(false);
+	}
+
 	// 기본자료형을 사용한 함수에 진짜 내용을 놓고
 
 	for (int i = 0; i < 2; i++)
 	{
-		if (_X < 0 || _Y < 0)
-		{
-			assert(false);
-		}
-		if (_X > Size_.x_ -1 || _Y > Size_.y_ - 1)
-		{
-			assert(false);
-		}
 		PixelData_[_Y][(_X * 2) + i] = _DefaultValue[i];
-
-		
-		
 	}
+
+}
+void TextScreen::setValue(int _number) {
+	Value_ = _number;
+}
+
+int TextScreen::getValue() {
+	return Value_;
 }

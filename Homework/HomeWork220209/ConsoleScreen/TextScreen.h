@@ -18,7 +18,7 @@ public:
 	TextScreen& operator=(TextScreen&& _Other) noexcept = delete;
 
 
-	ConsoleVector GetSize() 
+	ConsoleVector GetSize()
 	{
 		return Size_;
 	}
@@ -35,8 +35,8 @@ public:
 	// X Y위치에 글자를 출력한다.
 	void SetPixel(ConsoleVector _Pos, const char* _DefaultValue);
 	void SetPixel(int _X, int _Y, const char* _DefaultValue);
-
-	
+	void setValue(int number);
+	int getValue();
 
 protected:
 
@@ -44,6 +44,6 @@ private:
 	ConsoleVector Size_;
 	char** PixelData_;
 	char DefaultPixel_[3];
-
+	int Value_ = 0;;
 };
 
