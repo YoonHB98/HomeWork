@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{0f55d202-145e-409c-b3d6-0719da4397ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{566288a6-ce90-4a74-bb5a-546c08238ef1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\ConsoleGlobalInst.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\Monster.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\Player.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\ConsoleMath.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\ConsoleObject.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\TextScreen.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HomeWork220209\ConsoleScreen\ConsoleScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\HomeWork220209\ConsoleScreen\ConsoleGlobalInst.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HomeWork220209\ConsoleScreen\Monster.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HomeWork220209\ConsoleScreen\Player.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HomeWork220209\ConsoleScreen\ConsoleMath.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HomeWork220209\ConsoleScreen\ConsoleObject.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HomeWork220209\ConsoleScreen\TextScreen.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
