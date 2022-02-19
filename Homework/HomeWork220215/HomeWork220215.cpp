@@ -74,13 +74,15 @@ public:
     {
         int Before = Size_;
         int After = _Size;
-        GameArray Copy = GameArray();
-        Copy.ArrData_ = new DataType[Size_];
-        for (size_t i = 0; i < Size_; i++)
-        {
-            Copy.ArrData_[i] = i;//여기서 NewArray값 1~ 로 정해짐
-        }
+        //GameArray Copy = GameArray();
+        //Copy.ArrData_ = new DataType[Size_];
+        //for (size_t i = 0; i < Size_; i++)
+        //{
+        //    Copy.ArrData_[i] = i;//여기서 NewArray값 1~ 로 정해짐
+        //}
 
+        int* PrevValue = ArrData_;
+        ArrData_ = new int[After];
        Release();
        Size_ = _Size;
        ArrData_ = new DataType[_Size];
@@ -89,15 +91,15 @@ public:
        {
            for (size_t i = 0; i < After; i++)
            {
-               this->ArrData_[i] = Copy.ArrData_[i];
+               this->ArrData_[i] = PrevValue[i];
            }
            return;
        }
        if ( After > Before)
        {
-           for (size_t i = 0; i <= Before; i++)
+           for (size_t i = 0; i < Before; i++)
            {
-               this->ArrData_[i] = Copy.ArrData_[i];
+               this->ArrData_[i] = PrevValue[i];
            }
            //for (size_t i = Before; i < After; i++)
            //{
@@ -105,11 +107,18 @@ public:
            //}
            //return;
        }
- 
+
+       if (nullptr != PrevValue)
+       { 
+           delete PrevValue;
+           PrevValue = nullptr;
+
+       }
+
 
        
-       
     }
+
 
 public:
     GameArray(unsigned int _Size)
@@ -144,7 +153,7 @@ int main()
 
     NewArray2 = NewArray;
 
-    NewArray2.ReSize(2);
+    NewArray2.ReSize(5);
 
     for (size_t i = 0; i < NewArray2.GetSize(); i++)
     {
