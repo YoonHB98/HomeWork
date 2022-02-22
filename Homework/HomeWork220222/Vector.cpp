@@ -32,14 +32,12 @@ int main()
         MyVector.push_back(2);
         MyVector.push_back(8);
         MyVector.push_back(99);
-       
 
-        MyVector.sortup();
-
-        for (size_t i = 0; i <MyVector.size(); i++)
+        for (size_t i = 0; i < MyVector.size(); i++)
         {
             std::cout << MyVector[i] << std::endl;
         }
+
     }
 
     {

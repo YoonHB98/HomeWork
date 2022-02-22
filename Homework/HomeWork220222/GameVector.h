@@ -228,6 +228,8 @@ public:
 
         ArrData_[Size_] = _Data;
         ++Size_;
+        sortup();
+
     }
 
     DataType& operator[](const size_t _Index)
@@ -243,7 +245,7 @@ public:
     void sortup()
     {
         int TempData = 0;
-        ArrData_[Size_];
+     
             for (size_t i = 0; i < Size_ - 1 ; i++)
             {
                 for (size_t T = 0; T < Size_ - 1; T++)
