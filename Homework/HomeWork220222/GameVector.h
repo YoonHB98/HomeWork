@@ -246,9 +246,9 @@ public:
     {
         int TempData = 0;
      
-            for (size_t i = 0; i < Size_ - 1 ; i++)
+            for (size_t i = 0; i < Size_ -1 ; i++)
             {
-                for (size_t T = 0; T < Size_ - 1; T++)
+                for (size_t T = 0; T < Size_ -1; T++)
                 {
                     if (ArrData_[T] < ArrData_[T + 1])
                     {
