@@ -44,7 +44,7 @@ void GameEngineRenderer::Render(float _DeltaTime)
 	Angle += _DeltaTime * 360.0f;
 	Dis += _DeltaTime * 10.0f;
 
-	GetActor()->GetTransform().SetPosition(float4{300.0f, 300.0f} + Dir * Dis);
+	GetActor()->GetTransform().SetPosition(float4{600.0f, 300.0f} + Dir * Dis);
 
 	 //GetActor()->GetTransform().SetMove(Dir * _DeltaTime * 200.0f);
 
