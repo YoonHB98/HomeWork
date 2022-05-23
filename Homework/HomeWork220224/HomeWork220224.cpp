@@ -93,6 +93,29 @@ private:
 
         }
 
+        void DeleteData()
+        {
+            if (nullptr != LeftChild_)
+            {
+                LeftChild_->DeleteData();
+            }
+            if (nullptr != RightChild_)
+            {
+                RightChild_->DeleteData();
+            }
+
+            if (nullptr != LeftChild_)
+            {
+                delete LeftChild_;
+                LeftChild_ = nullptr;
+            }
+            if (nullptr != RightChild_)
+            {
+                delete RightChild_;
+                RightChild_ = nullptr;
+            }
+
+        }
 
         // 내보다 큰 부모를 찾는 함수
         MapNode* OverParent(const KeyType& _Key)
@@ -218,19 +241,19 @@ private:
         {
 
         }
-        ~MapNode()
-        {
-            if (nullptr != RightChild_)
-            {
-                delete RightChild_;
-                RightChild_ = nullptr;
-            }
-            if (nullptr != LeftChild_)
-            {
-                delete LeftChild_;
-                LeftChild_ = nullptr;
-            }
-        }
+        //~MapNode()
+        //{
+        //    if (nullptr != RightChild_)
+        //    {
+        //        delete RightChild_;
+        //        RightChild_ = nullptr;
+        //    }
+        //    if (nullptr != LeftChild_)
+        //    {
+        //        delete LeftChild_;
+        //        LeftChild_ = nullptr;
+        //    }
+        //}
 
     };
 
@@ -319,6 +342,15 @@ public:
 
     void LastOrder() {
         RootNode_->LastOrder();
+    }
+
+    void DeleteData() {
+        RootNode_->DeleteData();
+        if (nullptr != RootNode_)
+        {
+            delete RootNode_;
+            RootNode_ = nullptr;
+        }
     }
 
 public:
@@ -428,6 +460,7 @@ int main()
             std::cout << beginIter->first << std::endl;
         }
 
+        GMap.DeleteData();
         // 깊이 순회
 
     }
